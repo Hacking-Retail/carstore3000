@@ -8,3 +8,11 @@ This application uses the folowing technologies:
 * python 3.9
 * python Flask
 * postgres
+
+# Startup
+
+Start a postgres database with the `dockerfiles/db/conf.env` configurations
+
+```bash
+./run.sh
+```
