@@ -32,6 +32,7 @@ services:
     command: >
       bash -c "
         sleep 5s
+        ./migration.sh
         python carstore3000/api.py
       "
 
