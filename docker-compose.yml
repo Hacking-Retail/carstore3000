@@ -1,0 +1,16 @@
+---
+version: "3.3"
+
+services:
+  db:
+    stdin_open: true
+    tty: true
+    image: postgres:13
+    volumes:
+      - db_data:/var/lib/postgresql/data/
+    env_file:
+      - dockerfiles/db/conf.env
+
+volumes:
+  db_data:
+    driver: local
