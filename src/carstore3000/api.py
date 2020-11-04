@@ -1,6 +1,6 @@
 """Carstore3000 API"""
 from flask import Flask
-from carstore3000.extensions import db
+from carstore3000.extensions import db, migrate
 
 
 app = Flask(__name__)
@@ -11,6 +11,7 @@ for k, v in app.config.items():
     print(k, v)
 
 db.init_app(app)
+migrate.init_app(app)
 
 
 if __name__ == '__main__':
