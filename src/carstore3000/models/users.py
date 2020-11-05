@@ -6,7 +6,7 @@ from carstore3000.database import CRUDMixin
 
 
 class UserModel(CRUDMixin, db.Model):
-    __tablename__ = 'customers'
+    __tablename__ = 'users'
 
     index = Column(Integer, primary_key=True)
     username = Column(String(80), unique=True, nullable=False)

@@ -8,7 +8,7 @@ class CarModel(CRUDMixin, db.Model):
     __tablename__ = 'cars'
 
     index = Column(Integer, primary_key=True)
-    car_id = Column(String)
+    car_id = Column(Integer)
     color_slug = Column(String)
     door_count = Column(Integer)
     engine_displacement = Column(String)
@@ -17,7 +17,7 @@ class CarModel(CRUDMixin, db.Model):
     maker = Column(String)
     model = Column(String)
     mileage = Column(Integer)
-    manufacture_year = Column(String)
+    manufacture_year = Column(Integer)
     price_eur = Column(Float)
     seat_count = Column(Integer)
     transmission = Column(String)

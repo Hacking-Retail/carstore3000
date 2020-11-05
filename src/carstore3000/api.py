@@ -9,8 +9,8 @@ from carstore3000.models.users import UserModel
 
 @auth.verify_password
 def verify_password(username, password):
-    username = Customer.query.filter_by(username=username).first()
-    if not user or not user.verify_password(password):
+    username = UserModel.query.filter_by(username=username).first()
+    if not username or not username.verify_password(password):
         return False
     g.username = username
     return True
